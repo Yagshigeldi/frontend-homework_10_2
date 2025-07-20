@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main>
+        <div>
+            <h1>+998 99 682 54 25</h1>
+            <button>Start</button>
+        </div>
+    </main>
+
+    <script>
+        const h1El = document.querySelector("h1")
+        const buttonEl = document.querySelector("button")
+
+        const data = [
+            "+998 88 897 54 25",
+            "+998 91 123 65 78",
+            "+998 97 879 54 87",
+            "+998 33 654 83 10",
+            "+998 93 451 09 07",
+            "+998 94 065 28 92",
+            "+998 94 232 55 67",
+            "+998 90 151 33 08",
+            "+998 91 603 34 15",
+            "+998 77 350 01 27"
+        ]
+
+        buttonEl.addEventListener("click", () => {
+            const interval = setInterval(() => {
+                const index = Math.floor(Math.random() * data.length)
+                h1El.textContent = data[index]
+            }, 100)
+
+            setTimeout(() => {
+                clearInterval(interval)
+            }, 2500)
+        })
+    </script>
+</body>
+</html>
